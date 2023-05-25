@@ -12,12 +12,14 @@ public class PoligonoRegular extends Figura{
     PoligonoRegular(int numeroDeLados) {
         this();
         this.numeroDeLados = numeroDeLados;
+        validateNumeroDeLados();
     }
 
     PoligonoRegular(int numeroDeLados, double lado) {
         this();
         this.numeroDeLados = numeroDeLados;
         this.lado = lado;
+        validateNumeroDeLados();
     }
 
     public double getArea() {;
@@ -40,4 +42,11 @@ public class PoligonoRegular extends Figura{
         double anguloInterior = Math.toRadians(360 / (numeroDeLados * 2));
         return lado / (2 * Math.tan(anguloInterior));
     }
+
+    private void validateNumeroDeLados() throws NumeroInvalidoDeLados{
+        if(numeroDeLados < 5) {
+            throw new NumeroInvalidoDeLados();
+        }
+    }
+
 }

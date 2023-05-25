@@ -33,4 +33,5 @@ public abstract class Figura implements DrawableItem{
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
