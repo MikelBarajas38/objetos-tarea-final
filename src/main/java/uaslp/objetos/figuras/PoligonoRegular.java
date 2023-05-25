@@ -1,15 +1,21 @@
 package uaslp.objetos.figuras;
 
-public class PoligonoRegular {
+public class PoligonoRegular extends Figura{
 
     private int numeroDeLados;
     private double lado;
 
-    public PoligonoRegular(int numeroDeLados) {
+    PoligonoRegular() {
+        super("Poligono Regular");
+    }
+
+    PoligonoRegular(int numeroDeLados) {
+        this();
         this.numeroDeLados = numeroDeLados;
     }
 
-    public PoligonoRegular(int numeroDeLados, double lado) {
+    PoligonoRegular(int numeroDeLados, double lado) {
+        this();
         this.numeroDeLados = numeroDeLados;
         this.lado = lado;
     }

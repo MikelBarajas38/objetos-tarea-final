@@ -1,14 +1,15 @@
 package uaslp.objetos.figuras;
 
-public class Cuadrado {
+public class Cuadrado extends Figura{
 
     private double lado;
 
     Cuadrado() {
-
+        super("Cuadrado");
     }
 
     Cuadrado(double lado) {
+        this();
         this.lado = lado;
     }
 

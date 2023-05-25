@@ -1,15 +1,16 @@
 package uaslp.objetos.figuras;
 
-public class Triangulo {
+public class Triangulo extends Figura{
 
     private double base;
     private double altura;
 
     Triangulo() {
-
+        super("Triangulo", "Cualquier triangulo");
     }
 
     Triangulo(double base, double altura) {
+        this();
         this.base = base;
         this.altura = altura;
     }
